@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-ios</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+
+        <!--
+          Enable trim analyzers for class libraries.
+          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+        -->
+        <IsTrimmable>true</IsTrimmable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <NativeReference Include="native/GoogleMobileAdsSdkiOS-13.6.0/GoogleMobileAds.xcframework">
+            <Kind>Framework</Kind>
+            <Frameworks>UIKit Foundation CoreGraphics CoreLocation CoreMotion CoreTelephony EventKit EventKitUI MapKit MessageUI SafariServices StoreKit SystemConfiguration WebKit AdServices AppTrackingTransparency AudioToolbox AVFoundation CoreMedia CoreVideo JavaScriptCore Network UserNotifications</Frameworks>
+            <WeakFrameworks>MarketplaceKit</WeakFrameworks>
+        </NativeReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Ssit.Ads.Core\Ssit.Ads.Core.csproj" />
+    </ItemGroup>
+</Project>
