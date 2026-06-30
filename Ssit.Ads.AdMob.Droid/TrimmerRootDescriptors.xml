@@ -1,13 +1,8 @@
 <linker>
   <assembly fullname="Ssit.Ads.AdMob.Droid">
-    <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager" preserve="all" />
-    <type fullname="Ssit.Ads.AdMob.Droid.InterstitialCallback" preserve="all" />
-    <type fullname="Ssit.Ads.AdMob.Droid.InitListener" preserve="all" />
-    <type fullname="Ssit.Ads.AdMob.Droid.LoadCallback" preserve="all" />
-    <type fullname="Ssit.Ads.AdMob.Droid.FullScreenCallback" preserve="all" />
+    <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|InitListener" preserve="all" />
+    <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|LoadCallback" preserve="all" />
+    <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|InterstitialCallback" preserve="all" />
+    <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|FullScreenCallback" preserve="all" />
   </assembly>
-  <!-- Preserve JNI connector methods in Google Play Services bindings, which are
-       called from the Java side and are otherwise trimmed by TrimMode=full -->
-  <assembly fullname="Xamarin.GooglePlayServices.Ads" preserve="all" />
-  <assembly fullname="Xamarin.GooglePlayServices.Ads.Api" preserve="all" />
 </linker>
