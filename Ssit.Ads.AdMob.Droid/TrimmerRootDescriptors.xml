@@ -5,4 +5,9 @@
     <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|InterstitialCallback" preserve="all" />
     <type fullname="Ssit.Ads.AdMob.Droid.AdMobAdsManager|FullScreenCallback" preserve="all" />
   </assembly>
+  <!-- Prevent the trimmer from modifying these binding assemblies.
+       AOT compiles from the original (aot-in/) versions; if the trimmer changes
+       the packaged version, instance sizes diverge and Mono aborts at class-init. -->
+  <assembly fullname="Xamarin.GooglePlayServices.Ads.Api" action="copy" />
+  <assembly fullname="Xamarin.GooglePlayServices.Ads" action="copy" />
 </linker>
